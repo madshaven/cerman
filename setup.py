@@ -66,16 +66,18 @@ def _get_git_revision_from_file():
     return version
 
 
+if Path('.git').exists():
+    # get local git revision, if possible
+    GIT_REVISION = _get_git_revision()
+elif Path(VERSION_FILE).exists():
+    # read git revision from _version file
+    GIT_REVISION = _get_git_revision_from_file()
+else:
+    GIT_REVISION = 'Unknown'
+
+
 FULL_VERSION = VERSION
 if not IS_RELEASED:           # add git revision to full_version
-    if Path('.git').exists():
-        # get local git revision, if possible
-        GIT_REVISION = _get_git_revision()
-    elif Path(VERSION_FILE).exists():
-        # read git revision from _version file
-        GIT_REVISION = _get_git_revision_from_file()
-    else:
-        GIT_REVISION = 'Unknown'
 
     FULL_VERSION += '.dev-' + GIT_REVISION[:7]
 
@@ -96,7 +98,6 @@ if not release:
 
 #
 '''
-
     with Path(VERSION_FILE).open('w') as f:
         f.write(cnt)
 
@@ -106,36 +107,37 @@ def setup_package():
 
     _write_version_py()
 
-    setuptools.setup(name=NAME,
-          python_requires='>=3.6',
-          install_requires=[
-              'numpy',
-              'simplejson',
-              'matplotlib',
-              'scipy',
-              'statsmodels',
+    setuptools.setup(
+        name=NAME,
+        python_requires='>=3.6',
+        install_requires=[
+            'numpy',
+            'simplejson',
+            'matplotlib',
+            'scipy',
+            'statsmodels',
+            ],
+        version=VERSION,
+        maintainer=MAINTAINER,
+        maintainer_email=MAINTAINER_EMAIL,
+        author=AUTHOR,
+        author_email=AUTHOR_EMAIL,
+        description=DESCRIPTION,
+        long_description=LONG_DESCRIPTION,
+        url=URL,
+        download_url=DOWNLOAD_URL,
+        classifiers=CLASSIFIERS,
+        platforms=PLATFORMS,
+        packages = ['cerman'],
+        provides=['cerman'],
+        license=LICENSE,
+        entry_points={
+          'console_scripts': [
+              'cerman = cerman.run_cm:entry_point',
+              # idea: add simulate_cm
               ],
-          version=VERSION,
-          maintainer=MAINTAINER,
-          maintainer_email=MAINTAINER_EMAIL,
-          author=AUTHOR,
-          author_email=AUTHOR_EMAIL,
-          description=DESCRIPTION,
-          long_description=LONG_DESCRIPTION,
-          url=URL,
-          download_url=DOWNLOAD_URL,
-          classifiers=CLASSIFIERS,
-          platforms=PLATFORMS,
-          packages = ['cerman'],
-          provides=['cerman'],
-          license=LICENSE,
-          entry_points={
-            'console_scripts': [
-                'cerman = cerman.run_cm:entry_point',
-                # idea: add simulate_cm
-          ],
-    },
-          )
+          },
+        )
 
 
 if __name__ == '__main__':
