@@ -1,0 +1,18 @@
+{   "gap_size": 0.003,
+    "needle_radius": 6e-06,
+    "needle_voltage": "linspace(30e3, 120e3, 10)",
+    "liquid_name": "cyclohexane",
+    "liquid_alphamax": 130e06,
+    "liquid_Ealpha": 1.9e09,
+    "streamer_head_radius": 6e-06,
+    "streamer_U_grad": 0,
+    "streamer_d_merge": 50e-06,
+    "streamer_scale_tvl": 0.1,
+    "rc_tau0": [1e-8, 1e-4],
+    "rc_resistance": "linear",
+    "rc_capacitance": "hyperbole",
+    "rc_breakdown": [0, 4e6, 8e6, 16e6, 64e6],
+    "random_seed": null,
+    "save_specs_enabled": {
+        "streamer": true,
+        "stat": false}}

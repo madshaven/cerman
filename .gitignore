@@ -1,0 +1,31 @@
+# IGNORE
+
+# to be written when installing
+cerman/_version.py
+
+# folders
+# build folders of documentation
+doc/**/
+
+# parameters files and relevant files to be included explicitly
+examples/*
+
+# temporary files
+playground*/**
+
+# saved simulations
+simulation*/**
+
+# package information
+cerman.egg-info/*
+
+# sublime + python + system
+**/.idea/**
+**/__pycache__/**
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+*.pyc
+
+
+#

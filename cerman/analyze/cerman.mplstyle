@@ -1,0 +1,78 @@
+
+# Layout
+axes.grid:                   False
+grid.color:                  white
+grid.linestyle:              -    # solid line
+
+axes.axisbelow:              True
+axes.spines.bottom:          True
+axes.spines.left:            True
+axes.spines.right:           False
+axes.spines.top:             False
+xtick.bottom:                True
+ytick.left:                  True
+xtick.top:                   False
+ytick.right:                 False
+xtick.direction:             out
+ytick.direction:             out
+legend.loc:                  upper center
+legend.frameon:              False
+
+# Dimensions
+figure.figsize:              7.5, 5.3
+#figure.autolayout:          True
+xtick.major.size:            5.75
+xtick.minor.size:            0.00
+ytick.major.size:            5.75
+ytick.minor.size:            0.00
+xtick.major.width:           1.50
+xtick.minor.width:           1.50
+ytick.major.width:           1.50
+ytick.minor.width:           1.50
+# xtick.major.pad:             10.0
+# ytick.major.pad:             10.0
+# axes.labelpad:               12.0
+axes.linewidth:              1.50
+lines.linewidth:             3.00
+lines.markersize:            10.0
+# legend.borderaxespad:        0.00
+legend.handlelength:         1.50
+legend.handletextpad:        0.30
+legend.columnspacing:        1.00
+
+# Colors
+image.cmap:                  viridis
+figure.facecolor:            ffffff
+axes.facecolor:              white
+# axes.edgecolor:              424242
+legend.facecolor:            ffffff
+legend.edgecolor:            ffffff
+xtick.color:                 424242
+ytick.color:                 424242
+axes.labelcolor:             000000
+
+# Fonts
+mathtext.fontset:            stix
+font.family:                 STIXGeneral
+font.size:                   10.0
+axes.labelsize:              large
+axes.titlesize:              large
+legend.fontsize:             medium
+xtick.labelsize:             medium
+ytick.labelsize:             medium
+
+# Layout
+figure.constrained_layout.use:      True
+figure.constrained_layout.w_pad:    0.02     # default is 3/72 = 3pts
+figure.constrained_layout.h_pad:    0.02     # default is 3/72 = 3pts
+# figure.constrained_layout.wspace:   0.02
+# figure.constrained_layout.hspace:   0.02
+
+# Export
+savefig.dpi:                 150
+# savefig.bbox:                tight
+savefig.format:              png
+
+# Formatter
+axes.formatter.use_mathtext:      True
+axes.formatter.useoffset:         False

@@ -1,0 +1,21 @@
+# Updates to plot-style to make it better for publication
+
+# Layout
+axes.grid:                   False
+axes.facecolor:              white
+
+axes.spines.right:           False
+axes.spines.top:             False
+xtick.top:                   False
+ytick.right:                 False
+legend.facecolor:            ffffff
+legend.edgecolor:            ffffff
+axes.prop_cycle:             cycler('color', ['377EB8', 'E41A1C', '000000', '984ea3', 'ff7f00'])
+
+figure.figsize:              3.5, 2.5
+font.size:                   8
+
+# Export
+savefig.dpi:                 600
+
+
