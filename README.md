@@ -122,8 +122,7 @@ _Simulation model for the propagation of second mode streamers
 in dielectric liquids using the Townsend–Meek criterion_
 Journal of Physics Communications 2:105007 (2018)
 doi: [10/cxjf](https://dx.doi.org/10/cxjf)
-1. 
-**Inge Madshaven, Øystein Leif Hestad,
+1. **Inge Madshaven, Øystein Leif Hestad,
 Mikael Unge, Olof Hjortstam, Per-Olof Åstrand**
 _Conductivity and capacitance of streamers in avalanche model
 for streamer propagation in dielectric liquids_
