@@ -128,7 +128,7 @@ def setup_package():
         download_url=DOWNLOAD_URL,
         classifiers=CLASSIFIERS,
         platforms=PLATFORMS,
-        packages = ['cerman'],
+        packages=setuptools.find_packages(),
         provides=['cerman'],
         license=LICENSE,
         entry_points={
