@@ -15,7 +15,7 @@ import logging
 from . import tools
 
 # Settings
-FOLDER_PATH = str(Path(__file__).parent)
+FOLDER_PATH = Path(__file__).resolve().parent
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())
 
@@ -86,10 +86,10 @@ class CermanRCParams():
         if style == 'default':
             mpl.rcdefaults()
         elif style == 'cerman':
-            mpl.style.use(FOLDER_PATH + '/cerman.mplstyle')
+            mpl.style.use(FOLDER_PATH / 'cerman.mplstyle')
         elif style == 'clean':
-            # mpl.style.use(FOLDER_PATH + '/cerman.mplstyle')
-            mpl.style.use(FOLDER_PATH + '/cerman_clean.mplstyle')
+            # mpl.style.use(FOLDER_PATH / 'cerman.mplstyle')
+            mpl.style.use(FOLDER_PATH / 'cerman_clean.mplstyle')
         elif style == 'xkcd':
             # parameters should probably be based on figure size
             plt.xkcd()
