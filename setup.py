@@ -129,6 +129,7 @@ def setup_package():
         classifiers=CLASSIFIERS,
         platforms=PLATFORMS,
         packages=setuptools.find_packages(),
+        package_data = {'': ['*.mplstyle']},
         provides=['cerman'],
         license=LICENSE,
         entry_points={
