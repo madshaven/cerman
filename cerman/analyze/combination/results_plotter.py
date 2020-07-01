@@ -369,8 +369,6 @@ class ResultsPlotter(object):
         opts['scatter']     = 'Show scatter plot'
         opts['interpolate'] = 'Show interpolation'
         opts['statistics']  = 'Show average, plus/minus a deviation'
-        opts['colors']      = 'Cycle colors (default)'
-        opts['markers']     = 'Cycle markers'
         opts['logx']        = 'Show x-axis logarithmic'
         opts['logz']        = 'Show z-axis logarithmic'
         opts['title']       = 'Show default title'
@@ -434,7 +432,6 @@ class ResultsPlotter(object):
             scatter=True, statistics=False, interpolate=True,
             # control plot
             figure=True, save_data=False,
-            colors=True, markers=False,
             # other
             annotate=False,
             ### add below?
