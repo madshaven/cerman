@@ -22,14 +22,14 @@ Reference [[4](#references)] provides information on the implementation of the m
 ## Getting started
 
 ### Installation
+- Note: The software is developed for OSX and Linux, and has not been tested on Windows.
 - Install Python 3.6 or above - for instance from
 [Python.org](https://www.python.org/downloads/)
 or
 [Anaconda](https://www.anaconda.com/products/individual#Downloads).
 - If desired, create a virtual environment, see for example [`conda create`](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands).
 - Clone (or download) the current [repo](https://github.com/madshaven/cerman).
-- Install the package using `pip` from the appropriate folder.
-- `pip` also installs the dependencies 
+- Install the package using `pip` from the appropriate folder. `pip` also installs the dependencies 
 `numpy`,
 `simplejson`,
 `matplotlib`,
@@ -39,7 +39,7 @@ and
 ```shell
 $ git clone https://github.com/madshaven/cerman.git
 $ cd cerman
-$ pip install .
+$ pip install .  # installs cerman and dependencies
 ```
 - The software provides the command `cerman`.
 Verify the installation by running the command to display usage and actions.
@@ -58,7 +58,7 @@ the references [[1-4](#references)].
 
 
 ### Example of usage
-- Copy one of the example input files,
+Copy one of the example input files,
 for instance `small_gap.json`
  to an appropriate project folder.
 ```shell
@@ -66,7 +66,7 @@ $ mkdir small_gap_test
 $ cd small_gap_test
 $ cp path_to_cerman/examples/small_gap/small_gap.json .
 ```
-- Create simulation input parameter files, 
+Create simulation input parameter files, 
 in this case, 100 files named `small_gap_###.json`.
 Plot the parameters, for instance for the voltage, as below.
 ```shell
@@ -75,14 +75,14 @@ $ cerman ci -f small_gap.json
 $ # plot input files
 $ cerman pp -g "_0?1.json"
 ```
-- Start a series of simulations in loop, globbing for files matching a pattern.
+Start a series of simulations in loop, globbing for files matching a pattern.
 ```shell
 $ # simulate in sequential loop
 $ cerman sims -g "_0?0.json"
 $ # simulate in parallel loop using 4 threads
 $ cerman sims -g "_0?0.json" -m 4
 ```
-- Each simulation `small_gap_###.pkl` 
+Each simulation `small_gap_###.pkl` 
 creates a corresponding save file `small_gap_###_stat.pkl`.
 Plot simulation results saved in these files.
 ```shell
@@ -95,7 +95,7 @@ $ cerman ps speed -g _stat -o "legend=v xmax=2 method=average_v"
 $ # plot streamer position vs windowed average speed
 $ cerman ps speed -g _stat -o "legend=v xmax=2 method=window_v"
 ```
-- Parse simulation results in `small_gap_???_stat.pkl` to create `small_gap_stat.stat` 
+Parse simulation results in `small_gap_???_stat.pkl` to create `small_gap_stat.stat` 
 and
 plot the average propagation speed and final propagation length against voltage.
 ```shell
@@ -117,24 +117,24 @@ $ cerman pr v -g _stat -o "ykeys=psa_ls"
 ## References
 
 1. **Inge Madshaven, Per-Olof Åstrand, Øystein Leif Hestad,
-Stian Ingebrigtsen, Mikael Unge, Olof Hjortstam**
+Stian Ingebrigtsen, Mikael Unge, Olof Hjortstam**\
 _Simulation model for the propagation of second mode streamers
-in dielectric liquids using the Townsend–Meek criterion_
-Journal of Physics Communications 2:105007 (2018)
+in dielectric liquids using the Townsend–Meek criterion_\
+Journal of Physics Communications 2:105007 (2018)\
 doi: [10/cxjf](https://dx.doi.org/10/cxjf)
 1. **Inge Madshaven, Øystein Leif Hestad,
-Mikael Unge, Olof Hjortstam, Per-Olof Åstrand**
+Mikael Unge, Olof Hjortstam, Per-Olof Åstrand**\
 _Conductivity and capacitance of streamers in avalanche model
-for streamer propagation in dielectric liquids_
-Plasma Research Express 1:035014 (2019)
+for streamer propagation in dielectric liquids_\
+Plasma Research Express 1:035014 (2019)\
 doi: [10/c933](https://dx.doi.org/10/c933)
 1. **Inge Madshaven, Øystein Leif Hestad,
-Mikael Unge, Olof Hjortstam, Per-Olof Åstrand**
+Mikael Unge, Olof Hjortstam, Per-Olof Åstrand**\
 _Photoionization model for streamer propagation mode change
-in simulation model for streamers in dielectric liquids_
-Plasma Research Express 2:015002 (2020)
+in simulation model for streamers in dielectric liquids_\
+Plasma Research Express 2:015002 (2020)\
 doi: [10/dg8m](https://dx.doi.org/10/dg8m)
-1. **Inge Madshaven, Øystein Leif Hestad**
+1. **Inge Madshaven, Øystein Leif Hestad**\
 _Cerman: Software for simulating streamer propagation
-in dielectric liquids based on the Townsend–Meek criterion_
-(unpublished -- soon available on [arXiv](https://arxiv.org/)) 
+in dielectric liquids based on the Townsend–Meek criterion_\
+(unpublished – soon available on [arXiv](https://arxiv.org/)) 
