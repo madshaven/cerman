@@ -28,6 +28,7 @@ MAINTAINER_EMAIL    = 'inge.madshaven@gmail.com'
 DESCRIPTION         = 'Simulating streamer propagation in dielectric liquids'
 with Path('./README.md').open() as f:
     LONG_DESCRIPTION = f.read()
+LONG_DESCRIPTION_CONTENT_TYPE = 'text/markdown; charset=UTF-8; variant=GFM'
 URL                 = None
 DOWNLOAD_URL        = None
 LICENSE             = 'MIT'
@@ -124,6 +125,7 @@ def setup_package():
         author_email=AUTHOR_EMAIL,
         description=DESCRIPTION,
         long_description=LONG_DESCRIPTION,
+        long_description_content_type=LONG_DESCRIPTION_CONTENT_TYPE,
         url=URL,
         download_url=DOWNLOAD_URL,
         classifiers=CLASSIFIERS,
