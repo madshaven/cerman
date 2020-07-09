@@ -116,25 +116,22 @@ $ cerman pr v -g _stat -o "ykeys=psa_ls"
 
 ## References
 
-1. **Inge Madshaven, Per-Olof Åstrand, Øystein Leif Hestad,
-Stian Ingebrigtsen, Mikael Unge, Olof Hjortstam**\
+1. **Inge Madshaven, Per-Olof Åstrand, Øystein Leif Hestad, Stian Ingebrigtsen, Mikael Unge, Olof Hjortstam**\
 _Simulation model for the propagation of second mode streamers
 in dielectric liquids using the Townsend–Meek criterion_\
 Journal of Physics Communications 2:105007 (2018)\
 doi: [10/cxjf](https://dx.doi.org/10/cxjf) | arXiv: [1804.10473](https://arxiv.org/abs/1804.10473)
-1. **Inge Madshaven, Øystein Leif Hestad,
-Mikael Unge, Olof Hjortstam, Per-Olof Åstrand**\
+1. **Inge Madshaven, Øystein Leif Hestad, Mikael Unge, Olof Hjortstam, Per-Olof Åstrand**\
 _Conductivity and capacitance of streamers in avalanche model
 for streamer propagation in dielectric liquids_\
 Plasma Research Express 1:035014 (2019)\
 doi: [10/c933](https://dx.doi.org/10/c933) | arXiv: [1902.03945](https://arxiv.org/abs/1902.03945)
-1. **Inge Madshaven, Øystein Leif Hestad,
-Mikael Unge, Olof Hjortstam, Per-Olof Åstrand**\
+1. **Inge Madshaven, Øystein Leif Hestad, Mikael Unge, Olof Hjortstam, Per-Olof Åstrand**\
 _Photoionization model for streamer propagation mode change
 in simulation model for streamers in dielectric liquids_\
 Plasma Research Express 2:015002 (2020)\
 doi: [10/dg8m](https://dx.doi.org/10/dg8m) | arXiv: [1909.12694](https://arxiv.org/abs/1909.12694)
-1. **Inge Madshaven, Øystein Leif Hestad**\
+1. **Inge Madshaven, Øystein Leif Hestad, Per-Olof Åstrand**\
 _Cerman: Software for simulating streamer propagation
 in dielectric liquids based on the Townsend–Meek criterion_\
 arXiv: [2007.02999](https://arxiv.org/abs/2007.02999)
