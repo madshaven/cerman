@@ -134,4 +134,4 @@ doi: [10/dg8m](https://dx.doi.org/10/dg8m) | arXiv: [1909.12694](https://arxiv.o
 1. **Inge Madshaven, Øystein Leif Hestad, Per-Olof Åstrand**\
 _Cerman: Software for simulating streamer propagation
 in dielectric liquids based on the Townsend–Meek criterion_\
-arXiv: [2007.02999](https://arxiv.org/abs/2007.02999)
+doi: [10/f9bw](https://dx.doi.org/10/f9bw) | arXiv: [2007.02999](https://arxiv.org/abs/2007.02999)
