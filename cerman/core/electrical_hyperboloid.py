@@ -116,7 +116,7 @@ class ElectricalHyperboloid(GeometricalHyperboloid):
 
     @U0.setter
     def U0(self, U0):  # ensure scalar
-        self._U0 = np.asscalar(np.array(U0))
+        self._U0 = np.array(U0).item()
 
     @property
     def k(self):
@@ -127,7 +127,7 @@ class ElectricalHyperboloid(GeometricalHyperboloid):
 
     @k.setter
     def k(self, k):  # ensure scalar
-        self._k = np.asscalar(np.array(k))
+        self._k = np.array(k).item()
 
     @property
     def U(self):

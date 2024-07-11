@@ -78,11 +78,11 @@ class GeometricalHyperboloid():
             logger.warning(5, f'Hyperbole below zero {self.pos[2, 0]}')
 
         # Geometric
-        self.d = np.asscalar(self.z)    # the minimum z-value of the hyperbole
+        self.d = self.z.item()    # the minimum z-value of the hyperbole
         self.a = self.d + self.rp / 2   # the distance to the focus
         self.nu0 = np.arccos(self.d / self.a)  # asymptotic angle
         self.cos_nu0 = self.d / self.a
-        self.r = np.asscalar(np.sqrt(self.x**2 + self.y**2))
+        self.r = np.sqrt(self.x**2 + self.y**2).item()
 
     @property
     def pos(self):
@@ -102,7 +102,7 @@ class GeometricalHyperboloid():
 
     @rp.setter
     def rp(self, rp):
-        self._rp = np.asscalar(np.array(rp))  # ensure scalar
+        self._rp = np.array(rp).item()  # ensure scalar
         self._update()  # the reason for having a getter and setter
 
     def __repr__(self):
